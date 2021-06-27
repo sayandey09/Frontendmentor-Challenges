@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: hsl(0, 100%, 74%);
+  color: #fff;
+  background-image: url("./images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  /* padding: 40px; */
+
+  margin: 0 auto;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > div {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.container p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.box {
+  background-color: #fff;
+  padding: 1.3rem;
+  border-radius: 7px;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.box-blue {
+  background: hsl(248, 32%, 49%);
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 1.9rem;
+}
+
+.form-control small {
+  position: absolute;
+  color: hsl(0, 100%, 74%);
+  bottom: -24px;
+  font-weight: 600;
+  right: 0;
+  text-align: right;
+  opacity: 0;
+}
+
+.form-control.error small {
+  opacity: 1;
+}
+
+.form-control.error input {
+  /* border-width: 2px; */
+  border-color: hsl(0, 100%, 74%);
+}
+
+.form-control.error input::placeholder {
+  color: hsl(0, 100%, 74%);
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 5px;
+  border: 1px solid hsl(246, 25%, 77%);
+  display: block;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px solid hsl(248, 32%, 49%);
+  outline: none;
+}
+
+.form-control img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  opacity: 0;
+  height: 20px;
+}
+
+.form-control.error img {
+  opacity: 1;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  font-family: "Poppins", sans-serif;
+  background: hsl(154, 59%, 51%);
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid hsl(154, 59%, 45%);
+  box-shadow: 0 2px hsl(154, 59%, 45%);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+button:focus {
+  outline: none;
+}
+button:active {
+  box-shadow: 0 0 hsl(154, 59%, 45%);
+  transform: translateY(2px);
+}
+
+small {
+  display: block;
+  color: #bbb;
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+small a {
+  color: hsl(0, 100%, 74%);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("./images/bg-intro-mobile.png");
+  }
+  .container {
+    flex-direction: column;
+    margin: 2rem;
+  }
+  .container h1,
+  .container p {
+    text-align: center;
+    margin: 0;
+    padding: 0.3rem 0;
+  }
+  .box-blue {
+    padding: 0.3rem;
+  }
+}

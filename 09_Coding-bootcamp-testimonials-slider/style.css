@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+:root {
+  --Dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.3;
+  color: var(--Dark-Blue);
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  height: 90vh;
+  margin: 1rem auto;
+  background: #f4f4f4;
+  display: grid;
+  grid-template-columns: 3fr 2.5fr;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background: url("./images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 25rem;
+}
+
+.container .con-text {
+  height: 300px;
+  padding: 2rem 0;
+  position: relative;
+  top: 11rem;
+  left: 10rem;
+  background: url("./images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: 3rem 0;
+  background-size: 5rem;
+}
+
+.container .con-text > :first-child {
+  font-size: 1.9rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.container .con-text > :last-child {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.container .con-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: red; */
+  height: 100%;
+  background: url("./images/pattern-bg.svg") no-repeat;
+  background-position: center center;
+  background-size: 400px 400px;
+}
+
+.container .con-img > img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+}
+
+/* button */
+
+.button {
+  position: absolute;
+  bottom: 21%;
+  left: 60%;
+  transform: translate(60%, -23%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 20px hsla(240, 38%, 20%, 0.3);
+  background: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0;
+  width: 100px;
+  height: 50px;
+}
+.button > img {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 450px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: 18rem;
+  }
+  .container .con-text {
+    padding: 1rem 3rem;
+    align-items: center;
+    top: 0;
+    left: 0;
+    order: 2;
+    background-position: center 0;
+  }
+  .container .con-text > :first-child {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .container .con-text > :last-child {
+    text-align: center;
+  }
+  .container .con-text > :last-child strong {
+    display: block;
+  }
+
+  .container .con-img {
+    width: 300px;
+    height: 300px;
+    background-size: 300px 300px;
+    justify-self: center;
+  }
+  .container .con-img > img {
+    width: 250px;
+    height: 250px;
+  }
+  .button {
+    bottom: 55%;
+    left: 35%;
+    transform: translate(35%, 55%);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

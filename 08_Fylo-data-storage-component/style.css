@@ -1,0 +1,196 @@
+/*  */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Gradient: hsl(6, 100%, 80%);
+  --Pale_Blue: hsl(243, 100%, 93%);
+  --Grayish_Blue: hsl(229, 7%, 55%);
+  --Dark_Blue: hsl(228, 56%, 26%);
+  --Very_Dark_Blue: hsl(229, 57%, 11%);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  background: url("./images/bg-mobile.png") no-repeat center center / cover;
+  background-color: var(--Very_Dark_Blue);
+  color: var(--Grayish_Blue);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .box {
+  background: var(--Dark_Blue);
+  margin: 1rem;
+  padding: 1.6rem;
+  height: 9rem;
+  width: 350px;
+  border-radius: 0.3rem;
+}
+
+.container .box1 {
+  border-top-right-radius: 6rem;
+}
+
+.container .box1 > .option-icons {
+  display: flex;
+  margin-top: 1.3rem;
+  align-items: flex-end;
+}
+
+.container .box1 .option-icons > div {
+  padding: 0.6rem;
+  background: var(--Very_Dark_Blue);
+  margin: 0 0.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container .box1 .option-icons > div:hover i {
+  color: #fff;
+}
+
+.container .box2 {
+  text-align: center;
+  position: relative;
+}
+
+.container .box2 p {
+  font-weight: 400;
+}
+
+.container .box2 p strong {
+  font-size: 1.3rem;
+}
+
+.progress {
+  margin-top: 18px;
+  width: 100%;
+  height: 20px;
+  padding: 3px;
+  background-color: var(--Very_Dark_Blue);
+  border-radius: 10px;
+}
+.bar-progress {
+  width: 80%;
+  height: 15px;
+  padding-right: 4px;
+  background: var(--Gradient);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* transition: all 200ms linear; */
+}
+.bar-progress::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+}
+
+.legend {
+  font-weight: 600;
+  margin-top: 0.7rem;
+  display: flex;
+  color: var(--Pale_Blue);
+  justify-content: space-between;
+}
+
+.spotlight {
+  position: absolute;
+  bottom: -30px;
+  left: 90px;
+  /* right: 50%; */
+  /* transform: translate(50%, 50%); */
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 7px;
+  font-weight: 800;
+}
+
+.spotlight p strong {
+  color: #333;
+}
+
+/* media query */
+@media (min-width: 1024px) {
+  body {
+    background-image: url("./images/bg-desktop.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .container {
+    flex-direction: row;
+  }
+
+  .container .box {
+    margin-bottom: 8rem;
+  }
+
+  .container .box.box1 {
+    height: 10rem;
+    width: 350px;
+  }
+  .container .box.box2 {
+    height: 9rem;
+    width: 450px;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .bar-progress {
+    width: 70%;
+  }
+  .spotlight {
+    bottom: 120px;
+    left: 260px;
+  }
+  .spotlight p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .spotlight::before {
+    content: "";
+    right: 0;
+    bottom: -40px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50px 50px 0;
+    border-color: transparent #fff transparent transparent;
+
+    /* border-bottom: 20px solid #f00; */
+    z-index: 1;
+
+    position: absolute;
+    /* background: red; */
+  }
+}
+/* footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
