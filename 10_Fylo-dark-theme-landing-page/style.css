@@ -74,6 +74,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 15px;
+  flex-wrap: wrap;
 }
 
 nav .nav-ul {
@@ -93,6 +94,19 @@ nav .nav-ul {
 .nav-ul a:hover {
   opacity: 1;
   text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  color: #fff;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hamburger:focus {
+  outline: none;
 }
 
 /* hero */
@@ -319,6 +333,23 @@ footer .row .ul2 ul > li a {
 /* media */
 
 @media (max-width: 768px) {
+  nav .nav-ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .nav-ul li {
+    margin-bottom: 1rem;
+  }
+  .nav-ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
   .btn {
     width: 100%;
   }
